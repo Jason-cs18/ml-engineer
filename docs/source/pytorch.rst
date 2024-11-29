@@ -10,16 +10,18 @@ Useful Links:
 - `PyTorch Experiments Template (TorchRecipes) <https://github.com/facebookresearch/recipes>`_
 - `Model Graph Visualizer and Debugger (Model Explorer) <https://github.com/google-ai-edge/model-explorer>`_
 
-``torch.compile``
+torch.compile
 -----------------
 
-Accelerate inference
-^^^^^^^^^^^^^^^^^^^^^^
-xxx
+``torch.compile`` is a new feature in PyTorch that allows users to compile their models for faster training and inference. In practice, it can speed up model inference at least 30%.
 
-Accelerate training
-^^^^^^^^^^^^^^^^^^^^^^
-xxx
+Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and it will automatically compile your model for faster training and inference.
+
+.. code-block:: python
+
+    import torch
+    mod = MyModule()
+    opt_mod = torch.compile(mod)
 
 Profiling
 ----------------------
