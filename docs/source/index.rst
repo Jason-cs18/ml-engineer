@@ -9,5 +9,7 @@ Contents
 .. toctree::
 
    roadmap
-   k8s
+   pytorch
    cuda
+   k8s
+   ray
