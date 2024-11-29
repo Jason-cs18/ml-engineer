@@ -3,6 +3,13 @@ PyTorch
 ==========
 PyTorch is an open-source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is free and open-source software released under the Modified BSD license.
 
+Useful Links:
+
+- `ProjectPage Template (Nerfies) <https://github.com/nerfies/nerfies.github.io>`_
+- `Pytorch Lightning code guideline for conferences <https://github.com/Lightning-AI/deep-learning-project-template>`_
+- `PyTorch Experiments Template (TorchRecipes) <https://github.com/facebookresearch/recipes>`_
+- `Model Graph Visualizer and Debugger (Model Explorer) <https://github.com/google-ai-edge/model-explorer>`_
+
 ``torch.compile``
 -----------------
 
