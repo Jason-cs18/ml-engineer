@@ -1,7 +1,7 @@
-Welcome to mle documentation!
+Welcome to MLE documentation!
 ===================================
 
-**MLE** (machine learning engineer) is a personal knowledge base for machine learning engineers.
+**MLE** is a personal knowledge base for machine learning engineers.
 
 Contents
 --------
