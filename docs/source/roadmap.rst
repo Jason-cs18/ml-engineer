@@ -2,12 +2,12 @@
 MLE Roadmap
 ====================
 
-.. list-table:: ML Development Roadmap
+.. list-table:: 
    :widths: 25 25 50
    :header-rows: 1
 
    * - Tools
-     - Description
+     - Role
      - Status
    * - Kubenetes
      - Container orchestration
