@@ -8,5 +8,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   roadmap
+   k8s
+   cuda
