@@ -12,6 +12,9 @@ MLE Roadmap
    * - Math
      - Math notations
      - ✅
+   * - Makefile
+     - ML experiments automation
+     - ✅
    * - Kubenetes
      - Container orchestration
      - TBD
