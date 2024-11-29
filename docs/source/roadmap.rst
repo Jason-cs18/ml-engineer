@@ -9,6 +9,9 @@ MLE Roadmap
    * - Tools
      - Role
      - Status
+   * - Math
+     - Math notations
+     - ✅
    * - Kubenetes
      - Container orchestration
      - TBD
@@ -21,5 +24,10 @@ MLE Roadmap
    * - Ray
      - Distributed computing platform
      - TBD
-
+   * - LLM Serving
+     - Inference engines for LLMs
+     - TBD
+   * - Inference engines
+     - ``TorchScript, ONNX, TensorRT, etc``.
+     - TBD
 
