@@ -5,30 +5,6 @@ Kubenetes
 
 Kubenetes (k8s) is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a framework for deploying and managing containerized applications at scale, and is widely used in production environments.
 
-Known issues
-------------
-
-Use new configs to setup docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-After modifying the docker config file (``/etc/docker/deamon.json``), you need to restart the docker service to make the changes take effect. 
-
-.. code-block:: bash
-
-  sudo systemctl daemon-reload
-  sudo systemctl restart docker
-
-.. note::
-
-  If the commands above don't work, you can try to restart the docker service by using following commands
-
-  .. code-block:: bash
-  
-    sudo systemctl daemon-reload
-    sudo systemctl stop docker.service
-    sudo systemctl stop docker.socket
-    sudo systemctl start docker.service
-    sudo systemctl start docker.socket
-
 Kind
 ----
 `kind <https://kind.sigs.k8s.io/>`_ is a tool for running local Kubernetes clusters using Docker container “nodes”.
@@ -63,3 +39,27 @@ Use kind to create a k8s cluster
     sudo update-grub
     # 5. reboot
     sudo reboot
+
+Known issues
+------------
+
+Use new configs to setup docker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+After modifying the docker config file (``/etc/docker/deamon.json``), you need to restart the docker service to make the changes take effect. 
+
+.. code-block:: bash
+
+  sudo systemctl daemon-reload
+  sudo systemctl restart docker
+
+.. note::
+
+  If the commands above don't work, you can try to restart the docker service by using following commands
+
+  .. code-block:: bash
+  
+    sudo systemctl daemon-reload
+    sudo systemctl stop docker.service
+    sudo systemctl stop docker.socket
+    sudo systemctl start docker.service
+    sudo systemctl start docker.socket
