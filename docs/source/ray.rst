@@ -18,11 +18,15 @@ By leveraging Ray Cluster, users can efficiently manage and scale their AI workl
    :align: center
    :alt: Ray Cluster Architecture
 
+   Ray cluster components
+
 Ray Cluster simplifies the deployment and management of AI applications, offering users the convenience of utilizing the ray job SDK for seamless operations.
 
-.. image:: ./images/ray-job-diagram.png
+.. figure:: ./images/ray-job-diagram.png
    :align: center
    :alt: Ray Job Workflow
+
+   Ray job workflow
 
 Install Ray Cluster
 ^^^^^^^^^^^^^^^^^^^^
@@ -36,9 +40,11 @@ Use kuberay to manage Ray Clusters
 To efficiently manage multiple Ray clusters within a single Kubernetes cluster, we can utilize KubeRay, a Kubernetes-native operator specifically designed for this purpose. Each Ray cluster is composed of a head node pod and a set of worker node pods, allowing for the deployment and organization of different AI projects in a streamlined manner.
 
 
-.. image:: ./images/kuberay.png
+.. figure:: ./images/kuberay.png
    :align: center
    :alt: KubeRay Workflow
+
+   KubeRay workflow
 
 .. note::
     Using KubeRay, deploying and managing multiple Ray clusters within a single Kubernetes cluster becomes efficient. Each Ray cluster can be designated for deploying distinct AI projects, enabling streamlined organization and resource management.
