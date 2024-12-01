@@ -32,6 +32,7 @@ Large language model (LLM)
      - Affiliation
      - Date
      - Model size
+     - Model architecture
      - Pre-training
      - Post-training
      - Inference
@@ -40,6 +41,7 @@ Large language model (LLM)
      - Llama Team, AI @ Meta
      - 2024.07
      - 8B, 70B, 405B
+     - Encoder-decoder, group query attention (GQA), attention mask
      - PT (8k-2.87T token -> 128k-800B toke -> 40M token using smaller lr)
      - SFT + DPO 
      - Pipeline parallelism, FP8 quantization
