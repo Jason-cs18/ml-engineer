@@ -4,28 +4,28 @@ Ray
 
 Ray is a unified distributed framework for AI workloads. With Ray, you can build a scalable AI platform for training, inference, and serving machine learning models.
 
-Ray Core (Simple Distributed Applications)
+Ray Core (simple applications)
 --------------------------------------------
 xxx
 
-Ray Data (Data Engineering)
+Ray Data (data engineering)
 ----------------------------
 xxx
 
 
-Ray Train (Distributed Training)
+Ray Train (distributed training)
 --------------------------------
 xxx
 
-Ray Serve (Inference Server)
+Ray Serve (inference server)
 ----------------------------
 xxx
 
-Ray Tune (Hyperparameter Tuning)
+Ray Tune (hyperparameter tuning)
 --------------------------------
 xxx
 
-Ray Cluster (AI Platform)
+Ray Cluster (AI platform)
 -------------------------
 
 `Ray Cluster <https://docs.ray.io/en/latest/cluster/getting-started.html>`_ provides a scalable and flexible way to deploy and manage AI applications on Kubernetes. It consists of the following components:
@@ -77,4 +77,7 @@ xxx
 Monitor running jobs on Ray Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+Known Issues
+-------------
 xxx
