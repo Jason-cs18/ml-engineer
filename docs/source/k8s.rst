@@ -10,6 +10,27 @@ Docker
 
 Docker is a platform for developing, shipping, and running applications inside containers. It provides a lightweight and portable way to package and run applications, and is widely used in containerized environments such as Kubernetes.
 
+Install the latest Docker
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: bash
+  
+  systemctl stop docker
+
+  apt-get remove docker docker-engine docker.io containerd runc
+
+  apt-get -y autoremove  &&  apt-get clean
+
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list
+
+  aptitude update
+
+  aptitude install -y docker-ce docker-ce-cli containerd.io
+
+.. note::
+  use ``aptitude`` install to avoid dependency issues.
+
 Install nvidia-docker2
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -59,13 +80,14 @@ Kind
 `kind <https://kind.sigs.k8s.io/>`_ is a tool for running local Kubernetes clusters using Docker container “nodes”.
 kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
-Troubleshooting kind
-^^^^^^^^^^^^^^^^^^^^
-.. code-block:: bash 
+Install kind
+^^^^^^^^^^^^
 
-  kind create cluster --retain --image=kindest/node:v1.26.0
-  kind export logs
-  cat /tmp/xxx/kind-control-plane/journal.log # xxx is the name of log directory
+.. code-block:: bash
+
+  [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.25.0/kind-linux-amd64
+  chmod +x ./kind
+  sudo mv ./kind /usr/local/bin/kind
 
 Use kind to create a k8s cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,26 +120,46 @@ Sometimes, we can not pull images via kind and need to load local images instead
 
   kind load docker-image my-custom-image --name cluster-name
 
+Troubleshooting kind
+^^^^^^^^^^^^^^^^^^^^
+.. code-block:: bash 
+
+  kind create cluster --retain --image=kindest/node:v1.26.0
+  kind export logs
+  cat /tmp/xxx/kind-control-plane/journal.log # xxx is the name of log directory
+
+
 Known issues
 ------------
 
-Use new configs to setup docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-After modifying the docker config file (``/etc/docker/deamon.json``), you need to restart the docker service to make the changes take effect. 
+Docker configuration not working
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+When you modify the docker config file (``/etc/docker/deamon.json``), you can use restart the docker service to make the changes take effect. 
 
 .. code-block:: bash
 
   sudo systemctl daemon-reload
   sudo systemctl restart docker
 
+If the commands above don't work, you can try to restart the docker service by using following commands
+
+.. code-block:: bash
+
+  sudo systemctl daemon-reload
+  sudo systemctl stop docker.service
+  sudo systemctl stop docker.socket
+  sudo systemctl start docker.service
+  sudo systemctl start docker.socket
+
+Timeout when pulling images in kind
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can pull images locally and load them to kind.
+
+.. code-block:: bash
+
+  docker pull kindest/node:v1.26.0
+  kind load docker-image kindest/node:v1.26.0 --name kind
+
 .. note::
-
-  If the commands above don't work, you can try to restart the docker service by using following commands
-
-  .. code-block:: bash
-  
-    sudo systemctl daemon-reload
-    sudo systemctl stop docker.service
-    sudo systemctl stop docker.socket
-    sudo systemctl start docker.service
-    sudo systemctl start docker.socket
+  You'd better setup proxy for docker to accelerate the image pulling process.
