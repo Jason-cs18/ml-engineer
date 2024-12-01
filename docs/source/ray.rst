@@ -4,27 +4,6 @@ Ray
 
 Ray is a powerful, unified distributed framework designed to handle a wide range of AI workloads. It provides the tools and infrastructure necessary to build a scalable AI platform that supports various stages of the machine learning lifecycle, including training, inference, and serving models. By leveraging Ray, developers can efficiently manage and scale their AI applications, ensuring optimal performance and resource utilization.
 
-Ray Core (simple applications)
---------------------------------------------
-xxx
-
-Ray Data (data engineering)
-----------------------------
-xxx
-
-
-Ray Train (distributed training)
---------------------------------
-xxx
-
-Ray Serve (inference server)
-----------------------------
-xxx
-
-Ray Tune (hyperparameter tuning)
---------------------------------
-xxx
-
 Ray Cluster (AI platform)
 -------------------------
 
@@ -227,6 +206,15 @@ xxx
 Submit a serving job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+xxx
+
+
+Ray Train (distributed training)
+--------------------------------
+xxx
+
+Ray Serve (inference server)
+----------------------------
 xxx
 
 
