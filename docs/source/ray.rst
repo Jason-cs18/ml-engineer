@@ -4,31 +4,31 @@ Ray
 
 Ray is a unified distributed framework for AI workloads. With Ray, you can build a scalable AI platform for training, inference, and serving machine learning models.
 
-Ray Core
----------
+Ray Core (Simple Distributed Applications)
+--------------------------------------------
 xxx
 
-Ray Data
----------
+Ray Data (Data Engineering)
+----------------------------
 xxx
 
 
-Ray Train
----------
+Ray Train (Distributed Training)
+--------------------------------
 xxx
 
-Ray Serve
----------
+Ray Serve (Inference Server)
+----------------------------
 xxx
 
-Ray Tune
----------
+Ray Tune (Hyperparameter Tuning)
+--------------------------------
 xxx
 
-Ray Cluster
------------
+Ray Cluster (AI Platform)
+-------------------------
 
-Ray Cluster provides a scalable and flexible way to deploy and manage AI applications on Kubernetes. It consists of the following components:
+`Ray Cluster <https://docs.ray.io/en/latest/cluster/getting-started.html>`_ provides a scalable and flexible way to deploy and manage AI applications on Kubernetes. It consists of the following components:
 
 - Ray head node: The master node of the Ray cluster, responsible for managing the cluster and scheduling tasks.
 - Ray worker nodes: The worker nodes of the Ray cluster, responsible for executing tasks and storing data.
@@ -51,7 +51,7 @@ Install Ray Cluster
 
 Use kuberay to deploy Ray on Kubernetes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Kuberay is a Kubernetes-native operator for managing Ray clusters. Each Ray cluster consists of a head node pod and a collection of worker node pods.
+`Kuberay <https://docs.ray.io/en/latest/cluster/kubernetes/getting-started.html>`_ is a Kubernetes-native operator for managing Ray clusters. Each Ray cluster consists of a head node pod and a collection of worker node pods.
 
 .. image:: ./images/kuberay.png
    :align: center
