@@ -47,3 +47,39 @@ Large language model (LLM)
      - Pipeline parallelism, FP8 quantization
      - Multilingual support, multimodal support, safety migations with Llama Guard 3
     
+Multimodal models
+-------------------------------
+
+.. list-table:: 
+   :header-rows: 1
+
+   * - Name
+     - Affiliation
+     - Date
+     - Model architecture
+     - Training strategy
+     - Highlight
+   * - `CLIP <https://openai.com/blog/clip/>`_
+     - OpenAI
+     - ICML 2021
+     - Text encoder + Image encoder
+     - Contrastive learning
+     - The first work to reveal zero-shot capability with multimodal constrastive learning
+   * - `LLaVa <https://llava-vl.github.io/>`_
+     - University of Wisconsin-Madison, Microsoft Research, and Columbia University
+     - NeurIPS 2023
+     - Image encoder + projector + language model
+     - Instruction tuning
+     - The first work to show visual capability of LLM
+   * - `Stable Diffusion (SD) <https://arxiv.org/abs/2112.10752>`_
+     - Stability AI
+     - CVPR 2022
+     - VAE: text encoder + diffusion (U-Net) + image decoder 
+     - Reverse diffusion process
+     - Text to image generation, compute-intensive (less parameters but slow)
+   * - `Diffusion Transformer (DiT) <https://arxiv.org/abs/2212.09748>`_
+     - UC Berkeley and New York University
+     - ICCV 2023
+     - VAE: text encoder + diffusion (transformer) + image decoder
+     - Reverse diffusion process
+     - Compute-optimal, better scaling
