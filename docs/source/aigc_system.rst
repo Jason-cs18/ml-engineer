@@ -2,15 +2,15 @@
 AIGC System
 ===========
 
-Compound AI Systems (LLM Agents)
+LLM based agents
 --------------------------------
-What are compound AI systems?
+What are LLM based agents?
 
-How to build compound AI systems?
+How to build LLM based agents?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 workflow and tools
 
-How to optimize compound AI systems?
+How to optimize LLm based agents?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 challenges and solutions
 
