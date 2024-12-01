@@ -211,10 +211,22 @@ xxx
 
 Ray Train (distributed training)
 --------------------------------
+Ray Train is a scalable machine learning library for distributed training and fine-tuning.
+
+Train a image classification model on Ray Train
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 xxx
+
+
 
 Ray Serve (inference server)
 ----------------------------
+Ray Serve is a high-performance serving system that can be used to deploy machine learning models at scale. It provides a simple API for deploying models and can be used to serve models in a distributed fashion.
+
+Deploy a image classification model on Ray Serve
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 xxx
 
 

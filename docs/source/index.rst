@@ -17,3 +17,5 @@ Contents
    ray
    inference
    llm_serve
+   aigc_model
+   aigc_system

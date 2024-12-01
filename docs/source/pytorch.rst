@@ -220,3 +220,9 @@ Find training loop bottlenecks
     |  [LightningModule]BoringModel.setup              |  1.403e-06         |  1.403e-06      |
     |  [LightningModule]BoringModel.on_fit_start       |  1.226e-06         |  1.226e-06      |
     -------------------------------------------------------------------------------------------
+
+
+Hands-on examples using PyTorch Lightning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xxx
