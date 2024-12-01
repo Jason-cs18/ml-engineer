@@ -23,7 +23,7 @@ Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and
     mod = MyModule()
     opt_mod = torch.compile(mod)
 
-Profiling
+PyTorch profiling
 ----------------------
 xxx
 
@@ -222,7 +222,7 @@ Find training loop bottlenecks
     -------------------------------------------------------------------------------------------
 
 
-Hands-on examples using PyTorch Lightning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Hands-on examples
+^^^^^^^^^^^^^^^^^
 
 xxx
