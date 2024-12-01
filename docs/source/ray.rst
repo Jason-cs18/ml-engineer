@@ -32,11 +32,22 @@ Ray Cluster provides a scalable and flexible way to deploy and manage AI applica
 
 - Ray head node: The master node of the Ray cluster, responsible for managing the cluster and scheduling tasks.
 - Ray worker nodes: The worker nodes of the Ray cluster, responsible for executing tasks and storing data.
-- Kubernetes cluster: The underlying infrastructure for the Ray cluster, providing scalability and high availability.
 
-.. image:: https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75UclqPVqzUjicbd4f6144LDKlNCZujc6RaTa5N8rKdBJzribXiaIeTLttHwg/640?wx_fmt=png&wxfrom=13&tp=wxpic
+.. raw:: html
+    
+    <object data="./pinned-octocat.svg" type="image/svg+xml">
+    </object>
+
+    
+.. figure:: https://docs.ray.io/en/latest/_images/ray-cluster.svg
    :align: center
-   :alt: KubeRay Architecture
+   :alt: Ray Cluster Architecture
+
+With Ray Cluster, users can easily deploy and manage their AI applications via ray job SDK.
+
+.. image:: https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75Uc53G94uQXQBqgvk2bgUatWYhKDwbkHLyibvibGibeHUicRRgFNwAowpMAHw/640?wx_fmt=png&wxfrom=13&tp=wxpic
+   :align: center
+   :alt: Ray Job Workflow
 
 Install Ray Cluster
 ^^^^^^^^^^^^^^^^^^^^
@@ -46,7 +57,11 @@ Install Ray Cluster
 
 Use kuberay to deploy Ray on Kubernetes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-xxx
+Kuberay is a Kubernetes-native operator for managing Ray clusters. Each Ray cluster consists of a head node pod and a collection of worker node pods.
+
+.. image:: https://docs.ray.io/en/latest/_images/ray_on_kubernetes.png
+   :align: center
+   :alt: KubeRay Workflow
 
 Submit a training job to Ray Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
