@@ -25,6 +25,8 @@ Unlike training, scaling law for inference is dependent on the model size and th
 Large language model (LLM)
 --------------------------
 
+Large language models (LLMs) have demonstrated excellent performance in various natural language processing tasks. They allow users make different tasks with simply changing the input prompt. In this section, we list some representative LLMs.
+
 .. list-table:: 
    :header-rows: 1
 
@@ -50,36 +52,43 @@ Large language model (LLM)
 Multimodal models
 -------------------------------
 
+Multimodal models are divided into three categories: vision-language models, multimodal language models, and vision generation models. Visual-language models aim to achieve zero-shot visual perception via a unified multimodal representation. Multimodal language models target to make LLMs understand and generate multimodal content. Vision generation models generate images or videos from text and other modalities.
+
 .. list-table:: 
    :header-rows: 1
 
    * - Name
      - Affiliation
-     - Date
+     - Publication
+     - Category
      - Model architecture
      - Training strategy
      - Highlight
    * - `CLIP <https://openai.com/blog/clip/>`_
      - OpenAI
      - ICML 2021
+     - Vision-language
      - Text encoder + Image encoder
      - Contrastive learning
      - The first work to reveal zero-shot capability with multimodal constrastive learning
    * - `LLaVa <https://llava-vl.github.io/>`_
      - University of Wisconsin-Madison, Microsoft Research, and Columbia University
      - NeurIPS 2023
+     - Multimodal language models
      - Image encoder + projector + language model
      - Instruction tuning
      - The first work to show visual capability of LLM
    * - `Stable Diffusion (SD) <https://arxiv.org/abs/2112.10752>`_
      - Stability AI
      - CVPR 2022
+     - Vision generation
      - VAE: text encoder + diffusion (U-Net) + image decoder 
      - Reverse diffusion process
      - Text to image generation, compute-intensive (less parameters but slow)
    * - `Diffusion Transformer (DiT) <https://arxiv.org/abs/2212.09748>`_
      - UC Berkeley and New York University
      - ICCV 2023
+     - Vision generation
      - VAE: text encoder + diffusion (transformer) + image decoder
      - Reverse diffusion process
      - Compute-optimal, better scaling

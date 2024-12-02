@@ -2,7 +2,15 @@
 AIGC System
 ===========
 
-LLM based agents
+Memory managment for LLM serving
+--------------------------------
+LLM inference demands a lot of memory for KV caches. Especially for long-context requests and high concurrent requests, the large memory usage limits the scalability of LLM serving.
+
+To improve this, three techniques are widely used: continuous batching, paged attention, and vAttention.
+
+Orca
+
+LLM based agents development
 --------------------------------
 What are LLM based agents?
 
