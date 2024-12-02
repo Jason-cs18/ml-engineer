@@ -1,5 +1,5 @@
 ===========
-AIGC System
+AIGC system
 ===========
 
 Fast LLM serving
