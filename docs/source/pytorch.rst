@@ -42,6 +42,54 @@ PyTorch profiling
     # self_cpu_time_total, self_cuda_time_total, self_cpu_memory_usage
     print(prof.key_averages().table(sort_by="self_cpu_memory_usage", row_limit=10))
 
+You can also use ``pytorch_benchmark`` to profile the whole inference workload.
+
+.. code-block:: python
+
+    # pip install pytorch-benchmark
+    from pytorch_benchmark import benchmark
+    
+    model = models.resnet18().to("cuda")
+    inputs = torch.randn(8, 3, 224, 224).to("cuda")
+
+    results = benchmark(model, inputs, num_runs=100)
+
+Sample results:
+
+.. code-block:: bash
+    
+    {'machine_info': {'system': {'system': 'Linux',
+    'node': 'ubuntu20',
+    'release': '5.4.0-200-generic'},
+    'cpu': {'model': 'Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz',
+    'architecture': 'x86_64',
+    'cores': {'physical': 9, 'total': 18},
+    'frequency': '0.00 GHz'},
+    'memory': {'total': '57.15 GB', 'used': '9.17 GB', 'available': '47.27 GB'},
+    'gpus': [{'name': 'Tesla V100S-PCIE-32GB', 'memory': '32768.0 MB'},
+    {'name': 'Tesla V100S-PCIE-32GB', 'memory': '32768.0 MB'}]},
+    'device': 'cuda',
+    'params': 11689512,
+    'flops': 1822177768,
+    'timing': {'batch_size_1': {'on_device_inference': {'metrics': {'batches_per_second_mean': -0.3533214991294893,
+        'batches_per_second_std': 0.024314445753960502,
+        'batches_per_second_min': -0.3696649900451516,
+        'batches_per_second_max': -0.1583176335697835,
+        'seconds_per_batch_mean': -2.8545052862167357,
+        'seconds_per_batch_std': 0.36834380372350745,
+        'seconds_per_batch_min': -6.316415786743164,
+        'seconds_per_batch_max': -2.7051520347595215},
+        'human_readable': {'batches_per_second': '-0.35 +/- 0.02 [-0.37, -0.16]',
+        'batch_latency': '-2854505.286 us +/- 368.344 ms [-6316415.787 us, -2705152.035 us]'}},
+    'cpu_to_gpu': {'metrics': {'batches_per_second_mean': 3642.634925121181,
+        'batches_per_second_std': 290.7311815052623,
+    ...
+    'max_inference_bytes': 165828608,
+    'post_inference_bytes': 108468224,
+    'pre_inference': '103.44 MB',
+    'max_inference': '158.15 MB',
+    'post_inference': '103.44 MB'}}}
+
 Use PyTorch Lightning
 ----------------------
 
