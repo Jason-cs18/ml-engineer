@@ -7,6 +7,8 @@ CUDA is a parallel computing platform and application programming interface (API
 Why do we need to learn CUDA?
 ------------------------------
 
+- Existing foundation models are not hardware-optimized. We need to design hardware-aware models (e.g., `FlashAttention series <https://arxiv.org/abs/2205.14135>`_).
+
 CUDA extension for PyTorch
 ----------------------------
 
