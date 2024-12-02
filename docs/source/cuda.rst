@@ -8,12 +8,17 @@ Why do we need to learn CUDA?
 ------------------------------
 
 - Existing foundation models are not hardware-optimized. We need to design hardware-aware models (e.g., `FlashAttention series <https://arxiv.org/abs/2205.14135>`_).
+- Not all operators for new emerging models are supported by PyTorch. We have to implement them by ourselves.
 
 CUDA extension for PyTorch
 ----------------------------
+xxx
 
 How to profile a PyTorch model?
 -------------------------------
+
+Profile a PyTorch model using `torch.profiler <https://pytorch.org/docs/stable/profiler.html>`_.
+
 
 References
 -----------

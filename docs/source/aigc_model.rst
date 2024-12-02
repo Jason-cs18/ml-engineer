@@ -2,6 +2,21 @@
 AIGC model
 ==========
 
+Generative model review
+-----------------------
+
+**Autoencoder (AE)**
+
+**Variational Autoencoder (VAE)**
+
+**Vector Quantized Variational Autoencoder (VQ-VAE)**
+
+**Autoregressive**
+
+**Generative Adversarial Networks (GANs)**
+
+**Diffusion Models**
+
 Transformer alternatives
 ------------------------
 
