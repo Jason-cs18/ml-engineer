@@ -16,9 +16,7 @@ xxx
 
 How to profile a PyTorch model?
 -------------------------------
-
-Profile a PyTorch model using `torch.profiler <https://pytorch.org/docs/stable/profiler.html>`_.
-
+- `Using PyTorch Profiler to profile model execution time and memory usage <https://ml-engineer.readthedocs.io/en/latest/pytorch.html#pytorch-profiling>`_ 
 
 References
 -----------

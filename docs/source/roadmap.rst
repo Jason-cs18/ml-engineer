@@ -17,10 +17,10 @@ MLE roadmap
      - ✅
    * - Kubenetes
      - Container orchestration
-     - TBD
+     - ✅
    * - PyTorch
      - Deep learning framework
-     - TBD
+     - ✅
    * - CUDA
      - GPU acceleration
      - TBD

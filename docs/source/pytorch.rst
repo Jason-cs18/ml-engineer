@@ -284,8 +284,3 @@ Find training loop bottlenecks
     |  [LightningModule]BoringModel.on_fit_start       |  1.226e-06         |  1.226e-06      |
     -------------------------------------------------------------------------------------------
 
-
-Hands-on examples
-^^^^^^^^^^^^^^^^^
-
-xxx
