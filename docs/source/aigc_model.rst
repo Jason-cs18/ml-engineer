@@ -2,6 +2,15 @@
 AIGC model
 ==========
 
+Transformer alternatives
+------------------------
+
+Transformer has dominated the large foundation models in recent years. However, its quadratic computational complexity makes it hard to inference on long contexts. To address this issue, many alternatives have been proposed. Here we list some of them.
+
+**Mamba** (`Gu et al. <https://openreview.net/forum?id=tEYskw1VY2#discussion>`_) xxx
+
+**Mamba2** (`Dao et al. <https://arxiv.org/abs/2405.21060>`_) xxx
+
 Scaling law for training
 ------------------------
 Scaling law is an empirical scaling law that describes how neural network performance changes (e.g., loss :math:`L`) as key factors are scaled up or down. These factors typically include the number of parameters :math:`N`, training dataset size :math:`D`, and training cost :math:`C`. The scaling law is usually expressed as a power-law relationship between these factors and the performance metric.
@@ -92,3 +101,4 @@ Multimodal models are divided into three categories: vision-language models, mul
      - VAE: text encoder + diffusion (transformer) + image decoder
      - Reverse diffusion process
      - Compute-optimal, better scaling
+
