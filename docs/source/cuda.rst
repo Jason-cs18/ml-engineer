@@ -12,7 +12,7 @@ Why do we need to learn CUDA?
 CUDA extension for PyTorch
 ----------------------------
 
-How to profile PyTorch Model?
+How to profile a PyTorch model?
 -------------------------------
 
 References
