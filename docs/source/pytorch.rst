@@ -98,7 +98,7 @@ Sample results:
 Use NVIDIA Nsight Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-NVIDIA Nsight Systems provides a timeline view of your PyTorch code, allowing you to visualize the performance of your model and identify bottlenecks.
+NVIDIA Nsight Systems provides a **timeline** view of your PyTorch code, allowing you to visualize the performance of your model and identify bottlenecks.
 
 .. code-block:: bash
 
