@@ -5,17 +5,23 @@ AIGC model
 Generative model review
 -----------------------
 
-**Autoencoder (AE)**
+Taking a face generation as an example, we will introduce representative generative models and highlight their differences. The generation process aims to estimate the probability distribution of the face data :math:`p(x)`. With bayes rule, we can estimate the probability of the data given the model :math:`p(x|z)` by marginalizing over the latent variable :math:`z`:
 
-**Variational Autoencoder (VAE)**
+.. math::
 
-**Vector Quantized Variational Autoencoder (VQ-VAE)**
+  p(x) = \int p(x|z)p(z) dz
 
-**Autoregressive**
+**Autoencoder (AE)** models :math:`p(x)` where :math:`x` is a face. We cannot control the generated face. 
 
-**Generative Adversarial Networks (GANs)**
+**Variational Autoencoder (VAE)** models :math:`p(x|z)` where :math:`z` is a latent continuous variable (e.g., expression).
 
-**Diffusion Models**
+**Vector Quantized Variational Autoencoder (VQ-VAE)** models :math:`p(x|z)` where :math:`z` is a discrete latent variable (e.g., gender).
+
+**Autoregressive** models a joint distribution :math:`p(x_1, x_2, ..., x_T)` where :math:`x_1, x_2, ..., x_T` are the pixels of the face.
+
+**Generative Adversarial Networks (GANs)** employs a discriminator :math:`D(x)` to distinguish the real data :math:`x` from the generated data :math:`G(z)`. The generator :math:`G(z)` tries to fool the discriminator.
+
+**Diffusion Models** TBD
 
 Transformer alternatives
 ------------------------
