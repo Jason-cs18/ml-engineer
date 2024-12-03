@@ -25,6 +25,11 @@ Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and
 
 PyTorch profiling
 ----------------------
+
+Use PyTorch Profile
+^^^^^^^^^^^^^^^^^^^^
+PyTorch Profile provides a fine-grained view of the performance of your PyTorch code. It can help you identify bottlenecks (e.g., slow operations) and optimize your code accordingly.
+
 .. code-block:: python
     
     import torch
@@ -89,6 +94,52 @@ Sample results:
     'pre_inference': '103.44 MB',
     'max_inference': '158.15 MB',
     'post_inference': '103.44 MB'}}}
+
+Use NVIDIA Nsight Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+NVIDIA Nsight Systems provides a timeline view of your PyTorch code, allowing you to visualize the performance of your model and identify bottlenecks.
+
+.. code-block:: bash
+
+    # test_nsys.py
+    import torch
+    import torchvision.models as models
+    #from torch.profiler import profile, record_function, ProfilerActivity
+
+    torch.cuda.nvtx.range_push("model")
+    model = models.resnet18(pretrained=True).cuda()
+    torch.cuda.nvtx.range_pop()
+
+    torch.cuda.nvtx.range_push("inputs")
+    inputs = torch.randn(1, 3, 224, 224).cuda()
+    torch.cuda.nvtx.range_pop()
+    model.eval()
+
+    torch.cuda.nvtx.range_push("forward")
+    with torch.no_grad():
+        for i in range(30):
+            torch.cuda.nvtx.range_push(f"iteration {i}")
+            model(inputs)
+            torch.cuda.nvtx.range_pop()
+            
+    torch.cuda.nvtx.range_pop()
+
+Execute the code with ``nsys``:
+
+.. code-block:: bash
+
+    nsys profile -w true -t cuda,nvtx,osrt,cudnn,cublas -s none -o nsight_report -f true -x true python test_nsys.py
+
+You can view the results in the NVIDIA Nsight Systems GUI.
+
+.. figure:: ./images/nsys.png
+   :align: center
+   :alt: Ray Cluster Architecture
+
+   Nsys example
+
+As illustrated in the figure above, the first inference iteration is slow due to the warmup phase (e.g., allocating GPU resource via ``cudaFree``). The subsequent iterations are faster.
 
 Use PyTorch Lightning
 ----------------------

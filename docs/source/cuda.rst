@@ -46,11 +46,6 @@ CUDA extension for PyTorch
     input_tensor = torch.randn(100, device=device)
     output_tensor = square(input_tensor)
 
-
-How to profile a PyTorch model?
--------------------------------
-- `Using PyTorch Profiler to profile model execution time and memory usage <https://ml-engineer.readthedocs.io/en/latest/pytorch.html#pytorch-profiling>`_ 
-
 References
 -----------
 1. MIT 6.S096, Jan 2014. `"Effective Programming In C And C++" <https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/pages/syllabus/>`_.
