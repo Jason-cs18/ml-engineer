@@ -15,13 +15,33 @@ torch.compile
 
 ``torch.compile`` is a new feature in PyTorch that allows users to compile their models for faster training and inference. In practice, it can speed up model inference at least 30%.
 
+.. figure:: https://pytorch.org/assets/images/pytorch-2.0-img4.jpg
+    :align: center
+    :alt: Ray Cluster Architecture
+
+    ``torch.compile`` workflow
+
+The process begins with ``torch.compile`` taking a PyTorch model as input. It then utilizes ``TorchDynamo`` and ``AOTAutograd`` to generate execution graphs for both the forward and backward passes. Next, each operator within the graph is mapped to a manually optimized operator from either ``ATen`` or ``Prim IR``. Finally, ``TorchInductor`` compiles the generated graphs and produces execution Triton code for the GPU and C++/OpenMP code for the CPU.
+
 Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and it will automatically compile your model for faster training and inference.
 
 .. code-block:: python
 
+    # option 1: using torch.compile
     import torch
     mod = MyModule()
     opt_mod = torch.compile(mod)
+
+    # option 2: using @torch.compile warp your code 
+    t1 = torch.randn(10, 10)
+    t2 = torch.randn(10, 10)
+
+    @torch.compile
+    def opt_foo2(x, y):
+        a = torch.sin(x)
+        b = torch.cos(y)
+        return a + b
+    print(opt_foo2(t1, t2))
 
 PyTorch profiling
 ----------------------
