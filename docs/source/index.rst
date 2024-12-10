@@ -19,3 +19,4 @@ Contents
    llm_serve
    aigc_model
    aigc_system
+   llm_app
