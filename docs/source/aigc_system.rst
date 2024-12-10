@@ -29,30 +29,6 @@ Unlike LLM, diffusion models are compute-intensive and lead to slow inference. T
 
 **Approximate Caching** (`Agarwal et al. <https://www.usenix.org/conference/nsdi24/presentation/agarwal-shubham>`_) designs zzz
 
-LLM based agents development
---------------------------------
-What are LLM based agents?
-
-How to build LLM based agents?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-workflow and tools
-
-How to optimize LLm based agents?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-challenges and solutions
-
-Best practices
-^^^^^^^^^^^^^^
-tips for building and optimizing compound AI systems
-
-Case studies on researchers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-an autonmous AI agent can draft a research proposal and write a paper.
-
-Case studies on expert-level assistants
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-an AI agent can assist a people to analysis data and write a report.
-
 References
 -----------
 1. Yu et al. `"Orca: A Distributed Serving System for Transformer-Based Generative Models" <https://www.usenix.org/conference/osdi22/presentation/yu>`_ OSDI 2022.
