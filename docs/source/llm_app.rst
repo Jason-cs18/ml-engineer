@@ -28,3 +28,7 @@ This tutorial will guide you through building a AI assistant using `LlamaIndex <
 Recipe for AI scientist
 ------------------------
 This tutorial will guide you through building a AI scientist using `CrewAI <https://github.com/crewAIInc/crewAI>`_.
+
+
+References
+-----------
