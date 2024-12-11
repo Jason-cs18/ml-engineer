@@ -20,3 +20,4 @@ Contents
    aigc_model
    aigc_system
    llm_app
+   avatar_app
