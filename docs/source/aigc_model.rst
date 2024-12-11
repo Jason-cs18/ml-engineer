@@ -18,6 +18,8 @@ Compute-optimal transformer
 
 **FlashAtten v3** xxx
 
+**LayerSkip** (`Elhoushi et al. <https://arxiv.org/pdf/2404.16710>`_)
+
 Transformer alternatives
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -103,6 +105,13 @@ Multimodal models are divided into three categories: vision-language models, mul
      - Image encoder + projector + language model
      - Instruction tuning
      - The first work to show visual capability of LLM
+   * - `Spirit LM <https://arxiv.org/pdf/2402.05755>`_
+     - Meta AI, Inria, Paris, EHESS, ENS-PSL, CNRS, Paris
+     - under review
+     - Multimodal language models
+     - multimodal encoder + Llama 2 + multimodal decoder
+     - Next token prediction
+     - Making LLM listen and speak
    * - `Stable Diffusion (SD) <https://arxiv.org/abs/2112.10752>`_
      - Stability AI
      - CVPR 2022
@@ -209,3 +218,8 @@ Unlike generative models, visual foundation models are trained to extract visual
      - Model architecture
      - mae
      - the first high-resolution foundation model for human (e.g., 2D pose, part segmentation, depth, normal, etc.). 
+
+
+References
+-----------
+1. Elhoushi et al. `"LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding" <https://arxiv.org/pdf/2404.16710>`_ ACL 2024.
