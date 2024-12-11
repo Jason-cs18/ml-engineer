@@ -6,20 +6,31 @@ Large language models (LLMs) have demonstrated remarkable capabilities in variou
 LLM and its limitations
 ------------------------
 
-Fine-tuning vs. RAG
---------------------
+RAG
+----
 
-Research advancements for RAG
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Fine-tuning vs. RAG
+^^^^^^^^^^^^^^^^^^^^
+
+Measurements of RAG
+^^^^^^^^^^^^^^^^^^^^
+
+Challenges for RAG
+^^^^^^^^^^^^^^^^^^^^
+
+Advancedments in RAG
+^^^^^^^^^^^^^^^^^^^^
+
+**Graph-based RAG** xxx
+
+**Agentic RAG** xxx
 
 Agentic AI
 -----------
 
-Agentic RAG
-^^^^^^^^^^^^
+**Single agent** xxx
 
-Multi-agent AI
-^^^^^^^^^^^^^^^
+**Multi-agent AI** xxx
 
 Recipe for AI assistant
 ------------------------
