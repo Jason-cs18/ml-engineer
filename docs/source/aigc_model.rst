@@ -18,7 +18,13 @@ Compute-optimal transformer
 
 **FlashAtten v3** xxx
 
-**LayerSkip** (`Elhoushi et al. <https://arxiv.org/pdf/2404.16710>`_)
+**LayerSkip** (`Elhoushi et al. <https://arxiv.org/pdf/2404.16710>`_) incorporates early exits and speculative decoding to accelerate the inference speed of transformer. It first use early layers to generate outputs and subsequently use the rest of the layers to correct the outputs. It can accelerate Llama 2 by 1.34x - 2.76x.
+
+.. figure:: ./images/layerskip.png
+    :align: center
+    :alt: LayerSkip
+
+    ``LayerSkip`` overview
 
 Transformer alternatives
 ^^^^^^^^^^^^^^^^^^^^^^^^
