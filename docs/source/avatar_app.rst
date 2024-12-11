@@ -24,3 +24,6 @@ Body synthesis aims to generate a realistic body animation for the input audio. 
 
 References
 -------------
+1. JosephPai. `"Awesome Talking Face" <https://github.com/JosephPai/Awesome-Talking-Face>`_ Github repo.
+2. weihaox. `"Awesome Digital Human" <https://github.com/weihaox/awesome-digital-human>`_ Github repo.
+3. Jason-cs18. `"awesome-avatar" <https://github.com/Jason-cs18/awesome-avatar>`_ Github repo.
