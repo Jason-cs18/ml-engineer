@@ -21,6 +21,8 @@ Challenges for RAG
 Advancedments in RAG
 ^^^^^^^^^^^^^^^^^^^^
 
+**Self-RAG** (`Asai et al. <https://arxiv.org/abs/2310.11511>`_)
+
 **Graph-based RAG** xxx
 
 **Agentic RAG** xxx
