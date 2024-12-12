@@ -22,6 +22,10 @@ Body synthesis
 --------------
 Body synthesis aims to generate a realistic body animation for the input audio. The popular body synthesis methods often consists of two steps: 1) motion generation; 2) motion transfer.
 
+Animatable 3D avatars
+^^^^^^^^^^^^^^^^^^^^^^^
+xxx
+
 References
 -------------
 1. JosephPai. `"Awesome Talking Face" <https://github.com/JosephPai/Awesome-Talking-Face>`_ Github repo.
