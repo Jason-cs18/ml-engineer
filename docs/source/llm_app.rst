@@ -46,6 +46,7 @@ Challenges for RAG
     - Wrong ranks of retrieved documents
 2. **Time-consuming inference**: retrieval will add additional time to the inference process.
     - Iterative retrievals
+    - Long context for LLMs
 
 Recent advancements
 ^^^^^^^^^^^^^^^^^^^^
@@ -62,6 +63,8 @@ Recent advancements
 
     Multi-agent RAG (`Weaviate. <https://weaviate.io/blog/what-is-agentic-rag>`_)
 
+**xRAG** (`Chen et al. <https://arxiv.org/abs/2405.13792>`_) compress long contexts into a single token for LLM. It can reduce the memory footprint significantly and speedup the inference of LLMs.
+
 Agentic AI
 -----------
 Agentic AI (`Lilian Weng. <https://lilianweng.github.io/posts/2023-06-23-agent/>`_) powered by LLMs uses LLMs as a controller to complete tasks. It consists of four components: planer, memory, tool use, and action.
@@ -72,9 +75,16 @@ Agentic AI (`Lilian Weng. <https://lilianweng.github.io/posts/2023-06-23-agent/>
 
     Agent overview
 
-**Single agent** xxx
+**Single agent** (`Li et al. <https://arxiv.org/abs/2401.05459>`_) aims to complete a task by itself. It often simulates human behavior and uses LLM's reasoning ability to decompose the task into smaller sub-tasks. Subsequently, it uses external tools to complete all the sub-tasks and generate the final answer. It is only working for simple tasks (e.g., handle misleading user queries).
 
-**Multi-agent AI** xxx
+**Multi-agent AI** (`Guo et al. <https://arxiv.org/pdf/2402.01680>`_) leverages collective intelligence of multiple agents to complete complex tasks (e.g., develop a software product and write a research eassy). The workflow contains three phrases: decompose the goal with sub-tasks, build an agent for each task, and coordinate the agents to complete the goal. 
+
+.. figure:: ./images/multi-agent.png
+    :align: center
+    :alt: Ray Cluster Architecture
+
+    Multi-agent system overview
+
 
 Recipe for AI assistant
 ------------------------
@@ -87,7 +97,12 @@ This tutorial will guide you through building a AI scientist using `CrewAI <http
 
 References
 -----------
-1. Microsoft. `"GraphRAG" <https://github.com/microsoft/graphrag>`_ Github repo.
-2. HKUDS. `"LightRAG" <https://github.com/HKUDS/LightRAG>`_ Github repo.
+1. Microsoft. `"GraphRAG: A modular graph-based Retrieval-Augmented Generation (RAG) system" <https://github.com/microsoft/graphrag>`_ Github repo.
+2. HKUDS. `"LightRAG: Simple and Fast Retrieval-Augmented Generation" <https://github.com/HKUDS/LightRAG>`_ Github repo.
 3. Asai et al. `"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection" <https://arxiv.org/abs/2310.11511>`_ ICLR 2024.
-4. Lilian Weng. `"LLM Powered Autonomous Agents" <https://lilianweng.github.io/posts/2023-06-23-agent/>`_ Tech blog (2023).
+4. Chen et al. `"xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token" <https://arxiv.org/abs/2405.13792>`_ Neurips 2024.
+5. Lilian Weng. `"LLM Powered Autonomous Agents" <https://lilianweng.github.io/posts/2023-06-23-agent/>`_ Tech blog (2023).
+6. Li et al. `"Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security" <https://arxiv.org/abs/2401.05459>`_ arXiv preprint arXiv:2401.05459 (2024).
+7. Guo et al. `"Large Language Model based Multi-Agents: A Survey of Progress and Challenges" <https://arxiv.org/pdf/2402.01680>`_ IJCAI 2024.
+8. run-llama. `"LlamaIndex is a data framework for your LLM applications" <https://github.com/run-llama/llama_index>`_ Github repo.
+9. crewAIInc. `"CrewAI: Cutting-edge framework for orchestrating role-playing, autonomous AI agents" <https://github.com/crewAIInc/crewAI>`_ Github repo.
