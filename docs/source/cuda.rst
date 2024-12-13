@@ -57,3 +57,4 @@ References
 7. Richard Zou. `"Custom C++ and CUDA Extensions" <https://pytorch.org/tutorials/advanced/cpp_custom_ops.html#testing-an-operatorl>`_ PyTorch Tutorial.
 8. Georgi Gerganov. `"llama.cpp: LLM inference in C/C++" <https://github.com/ggerganov/llama.cpp>`_ Github repo.
 9. Christopher Ré. `"Systems for Foundation Models, and Foundation Models for Systems" <https://neurips.cc/virtual/2023/invited-talk/73990>`_ NeurIPS 2023 invited talk.
+10. NVIDIA. `"CUDA C++ Programming Guide" <https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html>`_ NVIDIA Documentation.
