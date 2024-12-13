@@ -10,6 +10,26 @@ Useful Links:
 - `PyTorch Experiments Template (TorchRecipes) <https://github.com/facebookresearch/recipes>`_
 - `Model Graph Visualizer and Debugger (Model Explorer) <https://github.com/google-ai-edge/model-explorer>`_
 
+Model visualization
+-------------------
+``Model Explorer`` provides a web-based interface for visualizing and debugging PyTorch models. You can use the following code to visualize any PyTorch model.
+
+.. code-block:: python
+
+    # pip install ai-edge-model-explorer
+    import model_explorer
+    import torch
+    import torchvision
+
+    # Prepare a PyTorch model and its inputs.
+    model = torchvision.models.mobilenet_v2().eval()
+    inputs = (torch.rand([1, 3, 224, 224]),)
+    ep = torch.export.export(model, inputs)
+
+    # Visualize.
+    model_explorer.visualize_pytorch('mobilenet', exported_program=ep)
+
+
 torch.compile
 -----------------
 
