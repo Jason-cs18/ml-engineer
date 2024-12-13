@@ -79,7 +79,13 @@ Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and
     optimized_model(x) # compiled on first run
 
     optimized_model(x) # this will be fast!
-    timeit.timeit('optimized_model(x)', number=10, globals=globals())
+    
+    # Tesla V100 32GB
+    # >>> timeit.timeit('model(x)', number=10, globals=globals())
+    # 0.10089640901423991
+    # >>> timeit.timeit('optimized_model(x)', number=10, globals=globals())
+    # 0.04496749211102724
+
 
 PyTorch profiling
 ----------------------
