@@ -63,6 +63,24 @@ Use ``torch.compile`` is simple. Just wrap your model with ``torch.compile`` and
         return a + b
     print(opt_foo2(t1, t2))
 
+``torch.compile`` has integrated with `Torch-TensorRT <https://github.com/pytorch/TensorRT>`_ and enables users to compile their models with ``TensorRT`` backend for faster inference.
+
+.. code-block:: python
+
+    # pip install torch-tensorrt
+    import torch
+    import timeit
+    import torch_tensorrt
+
+    model = MyModel().eval().cuda() # define your model here
+    x = torch.randn((1, 3, 224, 224)).cuda() # define what the inputs to the model will look like
+
+    optimized_model = torch.compile(model, backend="tensorrt")
+    optimized_model(x) # compiled on first run
+
+    optimized_model(x) # this will be fast!
+    timeit.timeit('optimized_model(x)', number=10, globals=globals())
+
 PyTorch profiling
 ----------------------
 
