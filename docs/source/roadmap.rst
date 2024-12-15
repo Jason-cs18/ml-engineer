@@ -31,7 +31,7 @@ MLE roadmap
      - Inference engines for LLMs
      - ✅
    * - Inference engines
-     - ``TorchScript, ONNX, TensorRT, etc``.
+     - TorchScript, ONNX, TensorRT, etc.
      - TBD
    * - AIGC model
      - Scaling laws, efficient transformers, generative models, etc.
