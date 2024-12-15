@@ -29,8 +29,20 @@ MLE roadmap
      - TBD
    * - LLM Serving
      - Inference engines for LLMs
-     - TBD
+     - ✅
    * - Inference engines
      - ``TorchScript, ONNX, TensorRT, etc``.
+     - TBD
+   * - AIGC model
+     - Scaling laws, efficient transformers, generative models, etc.
+     - TBD
+   * - AIGC system
+     - Fast LLM serving and efficient diffusion serving.
+     - TBD
+   * - LLM applications
+     - RAG and agentic LLMs
+     - TBD
+   * - Avatar applications
+     - TTS, talking-face synthesis, motion synthesis, 3D animatable avatars.
      - TBD
 

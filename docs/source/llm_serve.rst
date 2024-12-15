@@ -8,12 +8,46 @@ On this note, we summarize two popular inference engines for LLMs: `vLLM <https:
 
 vLLM
 ----
+`vLLM <https://github.com/vllm-project/vllm>`_ is a high-performance inference engine for LLMs. It is optimized for throughput and employs a lot of advanced features (e.g., PagedAttention, Continuous batching, Speculative decoding).
 
 Installation
 ^^^^^^^^^^^^^^^^^^
+.. code-block:: bash
+    
+    pip install vllm
 
-use `vLLM <https://github.com/vllm-project/vllm>`_ to serve LLMs.
+use vLLM to serve LLMs.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+star a vLLM server
+
+.. code-block:: bash
+
+    vllm serve Qwen/Qwen2.5-1.5B-Instruct --dtype auto --api-key token-abc123
+
+More advanced configurations can refer to `OpenAI Compatible Server <https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html>`_.
+
+send a request
+
+.. code-block:: python
+
+    from openai import OpenAI
+    # Set OpenAI's API key and API base to use vLLM's API server.
+    openai_api_key = "EMPTY"
+    openai_api_base = "http://localhost:8000/v1"
+
+    client = OpenAI(
+        api_key=openai_api_key,
+        base_url=openai_api_base,
+    )
+
+    chat_response = client.chat.completions.create(
+        model="Qwen/Qwen2.5-1.5B-Instruct",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "Tell me a joke."},
+        ]
+    )
+    print("Chat response:", chat_response)
 
 SGLang
 -------
