@@ -47,28 +47,39 @@ Vision foundation models
 
 **CLIP** (`Radford et al. <https://arxiv.org/pdf/2103.00020>`_) is the first work to present zero-shot image classification through image-vision contrastive pre-training. The model employs two encoders, one for images and the other for texts, and learns to map images and texts into a shared space where the similarity between them can be measured. Instead of using existing small datasets, authors have created a large-scale dataset containing 400M image-text pairs for pre-training.
 
-.. image:: https://github.com/openai/CLIP/raw/main/CLIP.png
+.. figure:: https://github.com/openai/CLIP/raw/main/CLIP.png
    :align: center
+   :alt: CLIP architecture
+   
+   CLIP Overview
 
 **SAM** (`Kirillov et al. <https://arxiv.org/pdf/2304.02643>`_) proposes a zero-shot segmentation model which enable text, point, bounding box, and mask prompts. The model consists of a Masked Auto-Encoder (MAE) image encoder, a prompt encoder, and a mask decoder. The model is pre-trained on 11B images and achieves state-of-the-art performance on zero-shot image segmentation.
 
-.. image:: https://github.com/facebookresearch/segment-anything/blob/main/assets/model_diagram.png?raw=true
+.. figure:: https://github.com/facebookresearch/segment-anything/blob/main/assets/model_diagram.png?raw=true
    :align: center
+
+   SAM Overview
 
 **EfficientSAM** (`Xiong et al. <https://arxiv.org/abs/2312.00863>`_) further improves computation-efficiency of SAM by compressing a heavy image encoder to a lightweight vision encoder. In specific, EfficientSAM learns a lightweight vision encoder by reconstructing features from the original image encoder. The model achieves 80+ FPS on A100.
 
-.. image:: https://yformer.github.io/efficient-sam/EfficientSAM_files/overview.png
+.. figure:: https://yformer.github.io/efficient-sam/EfficientSAM_files/overview.png
     :align: center
+
+    EfficientSAM Overview
 
 **YOLO-World** (`Cheng et al. <https://arxiv.org/abs/2401.17270>`_) is the first work to explore zero-shot object detetcion with a lightweight backbone (YOLOv8). The model contains a text encoder, a vision encoder, and a cross-modal fusion module. Cross-modal fusion module is used to enhance the features from text and vision encoders and generate the final object detection results. It achieves 52 FPS on V100.
 
-.. image:: https://www.yoloworld.cc/images/yolo_arch.png
+.. figure:: https://www.yoloworld.cc/images/yolo_arch.png
    :align: center
+
+   YOLO-World Overview
 
 **SAM 2** (`Ravi et al. <https://arxiv.org/abs/2408.00714>`_) extends SAM to support video segmentation and introduces a streaming memory for real-time video processing. The model is pre-trained on a new large-scale dataset named SA-V (50.9K videos & 196 hours).
 
-.. image:: https://github.com/facebookresearch/sam2/raw/main/assets/model_diagram.png?raw=true
+.. figure:: https://github.com/facebookresearch/sam2/raw/main/assets/model_diagram.png?raw=true
    :align: center
+
+   SAM 2 Overview
 
 Optimization methods
 ----------------------
