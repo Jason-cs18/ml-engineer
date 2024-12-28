@@ -29,15 +29,33 @@ Vision foundation models
 
 **CLIP** (`Radford et al. <https://arxiv.org/pdf/2103.00020>`_) is the first work to present zero-shot image classification through image-vision contrastive pre-training. The model employs two encoders, one for images and the other for texts, and learns to map images and texts into a shared space where the similarity between them can be measured. Instead of using existing small datasets, authors have created a large-scale dataset containing 400M image-text pairs for pre-training.
 
+**SAM** (`Kirillov et al. <https://arxiv.org/pdf/2304.02643>`_) 
+
+**EfficientSAM** (`Xiong et al. <https://arxiv.org/abs/2312.00863>`_)
+
 **YOLO-World** (`Cheng et al. <https://arxiv.org/abs/2401.17270>`_) is the first work to explore zero-shot object detetcion with a lightweight backbone (YOLOv8). The model contains a text encoder, a vision encoder, and a cross-modal fusion module. Cross-modal fusion module is used to enhance the features from text and vision encoders and generate the final object detection results. It achieves 52 FPS on V100.
+
+**SAM 2** (`Ravi et al. <https://arxiv.org/abs/2408.00714>`_)
 
 Optimization methods
 ----------------------
+**CoOp** (`Zhou et al. <https://arxiv.org/pdf/2109.01134>`_) 
+
+**CoCoOp** (`Zhou et al. <https://arxiv.org/pdf/2203.05557>`_)
+
 
 Metrics and evaluation
 ----------------------
 
+**LCA** (`Shi et al. <https://arxiv.org/abs/2407.16067>`_) introduces the Lowest Common Ancestor (LCA) metric to evaluate the out-of-distribution generalization ability of vision perception models. The LCA metric is designed to measure the similarity between the predicted class and the ground-truth class, and it is calculated by the lowest common ancestor of the predicted class and the ground-truth class in the class taxonomy.
+
 References
 ----------
 1. Radford et al. `"Learning Transferable Visual Models From Natural Language Supervision" <https://arxiv.org/pdf/2103.00020>`_ ICML 2021.
-2. Cheng et al. `"YOLO-World: Zero-shot Object Detection with Cross-modal Learning" <https://arxiv.org/abs/2401.17270>`_ CVPR 2024.
+2. Kirillov et al. `"Segment Anything" <https://arxiv.org/pdf/2304.02643>`_ ICCV 2023.
+3. Cheng et al. `"YOLO-World: Zero-shot Object Detection with Cross-modal Learning" <https://arxiv.org/abs/2401.17270>`_ CVPR 2024.
+4. Xiong et al. `"EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything" <https://arxiv.org/abs/2312.00863>`_ CVPR 2024.
+5. Ravi et al. `"SAM 2: Segment Anything in Images and Videos" <https://arxiv.org/abs/2408.00714>`_ ICLR 2025.
+6. Zhou et al. `"Learning to Prompt for Vision-Language Models" <https://arxiv.org/pdf/2109.01134>`_ IJCV 2022.
+7. Zhou et al. `"Conditional Prompt Learning for Vision-Language Models" <https://arxiv.org/pdf/2203.05557>`_ CVPR 2022.
+8. Shi et al. `"LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies" <https://arxiv.org/abs/2407.16067>`_ ICML 2024.
