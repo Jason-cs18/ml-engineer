@@ -83,15 +83,29 @@ Vision foundation models
 
 Optimization methods
 ----------------------
-**CoOp** (`Zhou et al. <https://arxiv.org/pdf/2109.01134>`_) 
+**CoOp** (`Zhou et al. <https://arxiv.org/pdf/2109.01134>`_) argues that the hand-crafted text prompts (e.g., an image of cat) are not always effective for vision-language models. To address this issue, authors propose a novel optimization method, CoOp, to update the text prompts during training. CoPo improves absolute performance by 15% on zero-shot image classification.
 
-**CoCoOp** (`Zhou et al. <https://arxiv.org/pdf/2203.05557>`_)
+.. figure:: ./images/copo.png
+   :align: center
 
+   CoOp Overview
+
+**CoCoOp** (`Zhou et al. <https://arxiv.org/pdf/2203.05557>`_) improves CoPo on new classes with input-conditional tokens. In specific, authors propose a new optimization method, CoCoOp, to update the text prompts with help of image features. CoCoOp achieves 10% improvement on CoPo.
+
+.. figure:: ./images/cocopo.png
+   :align: center
+
+   CoCoOp Overview
 
 Metrics and evaluation
 ----------------------
 
 **LCA** (`Shi et al. <https://arxiv.org/abs/2407.16067>`_) introduces the Lowest Common Ancestor (LCA) metric to evaluate the out-of-distribution generalization ability of vision perception models. The LCA metric is designed to measure the similarity between the predicted class and the ground-truth class, and it is calculated by the lowest common ancestor of the predicted class and the ground-truth class in the class taxonomy.
+
+.. figure:: https://elvishelvis.github.io/papers/lca/images/lca_calculate.png
+   :align: center
+
+   LCA Calculation
 
 References
 ----------
