@@ -17,6 +17,7 @@ Contents
    ray
    inference
    llm_serve
+   vision_perception
    aigc_model
    aigc_system
    llm_app

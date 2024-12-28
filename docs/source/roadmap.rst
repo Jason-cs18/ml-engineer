@@ -27,7 +27,7 @@ MLE roadmap
    * - Ray
      - Distributed computing platform
      - TBD
-   * - LLM Serving
+   * - LLM serving
      - Inference engines for LLMs
      - ✅
    * - Inference engines
@@ -36,6 +36,9 @@ MLE roadmap
    * - AIGC model
      - Scaling laws, efficient transformers, generative models, etc.
      - TBD
+   * - Vision perception
+     - Vision foundation models
+     - WIP
    * - AIGC system
      - Fast LLM serving and efficient diffusion serving.
      - TBD
