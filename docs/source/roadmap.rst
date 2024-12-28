@@ -38,7 +38,7 @@ MLE roadmap
      - TBD
    * - Vision perception
      - Vision foundation models
-     - WIP
+     - ✅
    * - AIGC system
      - Fast LLM serving and efficient diffusion serving.
      - TBD

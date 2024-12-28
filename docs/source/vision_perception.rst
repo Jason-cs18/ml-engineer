@@ -90,6 +90,11 @@ Optimization methods
 
    CoOp Overview
 
+.. figure:: ./images/transfer.png
+   :align: center
+
+   Generalization (Trained on ImageNet and Evaluate on others)
+
 **CoCoOp** (`Zhou et al. <https://arxiv.org/pdf/2203.05557>`_) improves CoPo on new classes with input-conditional tokens. In specific, authors propose a new optimization method, CoCoOp, to update the text prompts with help of image features. CoCoOp achieves 10% improvement on CoPo.
 
 .. figure:: ./images/cocopo.png
