@@ -27,41 +27,11 @@ Taking a face generation as an example, we will introduce representative generat
 
 **3D Gaussian Splatting (3DGS)** WIP
 
-Efficient transformer
-----------------------
-
-Compute-optimal transformer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Mixture-of-Experts (MoE)** xxx
-
-**Group Head Attention (GHA)** xxx
-
-**FlashAtten v1** xxx
-
-**FlashAtten v2** xxx
-
-**FlashAtten v3** xxx
-
-**LayerSkip** (`Elhoushi et al. <https://arxiv.org/pdf/2404.16710>`_) incorporates early exits and speculative decoding to accelerate the inference speed of transformer. It first use early layers to generate outputs and subsequently use the rest of the layers to correct the outputs. It can accelerate Llama 2 by 1.34x - 2.76x.
-
-.. figure:: ./images/layerskip.png
-    :align: center
-    :alt: LayerSkip
-
-    ``LayerSkip`` overview
-
-Transformer alternatives
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Transformer has dominated the large foundation models in recent years. However, its quadratic computational complexity makes it hard to inference on long contexts. To address this issue, many alternatives have been proposed. Here we list some of them.
-
-**Mamba** (`Gu et al. <https://openreview.net/forum?id=tEYskw1VY2#discussion>`_) xxx
-
-**Mamba2** (`Dao et al. <https://arxiv.org/abs/2405.21060>`_) xxx
+Large Language Model (LLM)
+---------------------------
 
 Scaling law for training
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Scaling law is an empirical scaling law that describes how neural network performance changes (e.g., loss :math:`L`) as key factors are scaled up or down. These factors typically include the number of parameters :math:`N`, training dataset size :math:`D`, and training cost :math:`C`. The scaling law is usually expressed as a power-law relationship between these factors and the performance metric.
 
 .. math::
@@ -77,11 +47,11 @@ In practice, we often conduct many experiments in a limited budget and find the 
    Llama3 scaling law
 
 Scaling law for inference
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Unlike training, scaling law for inference is dependent on the model size and the inference strategy.
 
-Large language model (LLM)
---------------------------
+Milestone LLMs
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Large language models (LLMs) have demonstrated excellent performance in various natural language processing tasks. They allow users make different tasks with simply changing the input prompt. In this section, we list some representative LLMs.
 
@@ -122,8 +92,8 @@ Large language models (LLMs) have demonstrated excellent performance in various 
 
    Large Concept Model
 
-Multimodal models
--------------------------------
+Multimodal LLMs
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Multimodal models are divided into three categories: vision-language models, multimodal language models, and vision generation models. Visual-language models aim to achieve zero-shot visual perception via a unified multimodal representation. Multimodal language models target to make LLMs understand and generate multimodal content. Vision generation models generate images or videos from text and other modalities.
 
@@ -137,13 +107,6 @@ Multimodal models are divided into three categories: vision-language models, mul
      - Model architecture
      - Training strategy
      - Highlight
-   * - `CLIP <https://openai.com/blog/clip/>`_
-     - OpenAI
-     - ICML 2021
-     - Vision-language
-     - Text encoder + Image encoder
-     - Contrastive learning
-     - The first work to reveal zero-shot capability with multimodal constrastive learning
    * - `LLaVa <https://llava-vl.github.io/>`_
      - University of Wisconsin-Madison, Microsoft Research, and Columbia University
      - NeurIPS 2023
@@ -158,20 +121,39 @@ Multimodal models are divided into three categories: vision-language models, mul
      - multimodal encoder + Llama 2 + multimodal decoder
      - Next token prediction
      - Making LLM listen and speak
-   * - `Stable Diffusion (SD) <https://arxiv.org/abs/2112.10752>`_
-     - Stability AI
-     - CVPR 2022
-     - Vision generation
-     - VAE: text encoder + diffusion (U-Net) + image decoder 
-     - Reverse diffusion process
-     - Text to image generation, compute-intensive (less parameters but slow)
-   * - `Diffusion Transformer (DiT) <https://arxiv.org/abs/2212.09748>`_
-     - UC Berkeley and New York University
-     - ICCV 2023
-     - Vision generation
-     - VAE: text encoder + diffusion (transformer) + image decoder
-     - Reverse diffusion process
-     - Compute-optimal, better scaling
+
+Efficient transformer
+----------------------
+
+Compute-optimal transformer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Mixture-of-Experts (MoE)** xxx
+
+**Group Head Attention (GHA)** xxx
+
+**FlashAtten v1** xxx
+
+**FlashAtten v2** xxx
+
+**FlashAtten v3** xxx
+
+**LayerSkip** (`Elhoushi et al. <https://arxiv.org/pdf/2404.16710>`_) incorporates early exits and speculative decoding to accelerate the inference speed of transformer. It first use early layers to generate outputs and subsequently use the rest of the layers to correct the outputs. It can accelerate Llama 2 by 1.34x - 2.76x.
+
+.. figure:: ./images/layerskip.png
+    :align: center
+    :alt: LayerSkip
+
+    ``LayerSkip`` overview
+
+Transformer alternatives
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Transformer has dominated the large foundation models in recent years. However, its quadratic computational complexity makes it hard to inference on long contexts. To address this issue, many alternatives have been proposed. Here we list some of them.
+
+**Mamba** (`Gu et al. <https://openreview.net/forum?id=tEYskw1VY2#discussion>`_) xxx
+
+**Mamba2** (`Dao et al. <https://arxiv.org/abs/2405.21060>`_) xxx
 
 References
 -----------
