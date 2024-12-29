@@ -106,7 +106,22 @@ Large language models (LLMs) have demonstrated excellent performance in various 
      - SFT + DPO 
      - Pipeline parallelism, FP8 quantization
      - Multilingual support, multimodal support, safety migations with Llama Guard 3
-    
+   * - `Large Concept Models <https://github.com/facebookresearch/large_concept_model>`_
+     - The LCM team
+     - 2024.12
+     - Model size
+     - Model architecture
+     - Pre-training
+     - Post-training
+     - Inference
+     - Sentence-to-sentence model, 1.6B parameter, 1.3T token
+
+.. figure:: ./images/lcm.png
+   :align: center
+   :alt: Large Concept Model
+
+   Large Concept Model
+
 Multimodal models
 -------------------------------
 
