@@ -72,19 +72,19 @@ Large language models (LLMs) have demonstrated excellent performance in various 
      - 2024.07
      - 8B, 70B, 405B
      - Encoder-decoder, group query attention (GQA), attention mask
-     - PT (8k-2.87T token -> 128k-800B toke -> 40M token using smaller lr)
+     - PT (8k-2.87T token -> 128k-800B token -> 40M token using smaller lr)
      - SFT + DPO 
      - Pipeline parallelism, FP8 quantization
      - Multilingual support, multimodal support, safety migations with Llama Guard 3
    * - `Large Concept Models <https://github.com/facebookresearch/large_concept_model>`_
      - The LCM team @ Meta
      - 2024.12
-     - Model size
-     - Model architecture
-     - Pre-training
-     - Post-training
-     - Inference
-     - Sentence-to-sentence model, 1.6B parameter, 1.3T token, a better choice for long-text tasks
+     - 1.6B (1.3T token) -> 7B (2.7T token)
+     - Next-sentence prediction
+     - SFT + IFT (32 A100)
+     - 
+     - 
+     - Multilingual support, multimodal support, sentence-to-sentence
 
 .. figure:: ./images/lcm.png
    :align: center
