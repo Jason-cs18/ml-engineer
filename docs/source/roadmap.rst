@@ -35,7 +35,7 @@ MLE roadmap
      - TBD
    * - AIGC model
      - Scaling laws, efficient transformers, generative models, etc.
-     - TBD
+     - WIP
    * - Vision perception
      - Vision foundation models
      - ✅
