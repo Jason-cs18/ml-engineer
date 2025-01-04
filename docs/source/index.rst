@@ -22,3 +22,4 @@ Contents
    aigc_system
    llm_app
    avatar_app
+   video_streaming

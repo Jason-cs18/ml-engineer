@@ -26,6 +26,8 @@ Tutorial notebooks are listed `here <https://docs.nvidia.com/nemo-framework/user
 Generative model basics
 --------------------------------
 
+
+
 Taking a face generation as an example, we will introduce representative generative models and highlight their differences. The generation process aims to estimate the probability distribution of the face data :math:`p(x)`. With bayes rule, we can estimate the probability of the data given the model :math:`p(x|z)` by marginalizing over the latent variable :math:`z`:
 
 .. math::
@@ -178,4 +180,6 @@ Transformer has dominated the large foundation models in recent years. However, 
 
 References
 -----------
-1. Elhoushi et al. `"LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding" <https://arxiv.org/pdf/2404.16710>`_ ACL 2024.
+1. Kaiming He. `6.S978 Deep Generative Models (MIT EECS, 2024 Fall). <https://mit-6s978.github.io/schedule.html>`_
+2. Lilian Weng. `"What are Diffusion Models?" <https://lilianweng.github.io/posts/2021-07-11-diffusion-models/>`_ Tech Blog (2021). 
+3. Elhoushi et al. `"LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding" <https://arxiv.org/pdf/2404.16710>`_ ACL 2024.

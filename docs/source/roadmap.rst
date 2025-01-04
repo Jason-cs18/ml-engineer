@@ -48,4 +48,7 @@ MLE roadmap
    * - Avatar applications
      - TTS, talking-face synthesis, motion synthesis, 3D animatable avatars.
      - TBD
+   * - Video streaming
+     - volume video streaming, video conferencing
+     - WIP
 
