@@ -50,6 +50,12 @@ Taking a face generation as an example, we will introduce representative generat
 
 **3D Gaussian Splatting (3DGS)** WIP
 
+Video Foundation Model 
+----------------------
+Video foundation models are a type of generative model that can generate videos. They are typically trained on large-scale video datasets and can be used for various applications such as video generation, video editing, and video synthesis.
+
+**Cosmos** `(NVIDIA Tech Report) <https://d1qx31qr3h6wln.cloudfront.net/publications/NVIDIA%20Cosmos_4.pdf>`_
+
 Large Language Model (LLM)
 ---------------------------
 
@@ -108,6 +114,15 @@ Large language models (LLMs) have demonstrated excellent performance in various 
      - 
      - 
      - Multilingual support, multimodal support, sentence-to-sentence
+   * - `DeepSeek <https://arxiv.org/pdf/2412.19437>`_
+     - DeepSeek
+     - 2024.12
+     - Model size
+     - Model architecture
+     - Pre-training
+     - Post-training
+     - Inference
+     - Highlight
 
 .. figure:: ./images/lcm.png
    :align: center
@@ -118,7 +133,7 @@ Large language models (LLMs) have demonstrated excellent performance in various 
 Multimodal LLMs
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Multimodal models are divided into three categories: vision-language models, multimodal language models, and vision generation models. Visual-language models aim to achieve zero-shot visual perception via a unified multimodal representation. Multimodal language models target to make LLMs understand and generate multimodal content. Vision generation models generate images or videos from text and other modalities.
+Multimodal visual-language models are divided into two categories: vision-language models and multimodal language models. Visual-language models aim to achieve zero-shot visual perception via a unified multimodal representation. Multimodal language models target to make LLMs understand and generate multimodal content.
 
 .. list-table:: 
    :header-rows: 1
@@ -144,6 +159,13 @@ Multimodal models are divided into three categories: vision-language models, mul
      - multimodal encoder + Llama 2 + multimodal decoder
      - Next token prediction
      - Making LLM listen and speak
+   * - `NVILA <https://arxiv.org/pdf/2412.04468>`_
+     - NVIDIA
+     - 2024.12 arXiv preprint
+     - multimodal language models
+     - Model architecture
+     - Training strategy
+     - Highlight
 
 Efficient transformer
 ----------------------
