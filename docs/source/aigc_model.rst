@@ -114,7 +114,7 @@ Large language models (LLMs) have demonstrated excellent performance in various 
      - 
      - 
      - Multilingual support, multimodal support, sentence-to-sentence
-   * - `DeepSeek <https://arxiv.org/pdf/2412.19437>`_
+   * - `DeepSeek-V3 <https://arxiv.org/pdf/2412.19437>`_
      - DeepSeek
      - 2024.12
      - Model size
