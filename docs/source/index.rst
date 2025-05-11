@@ -8,7 +8,6 @@ Contents
 
 .. toctree::
 
-   math
    python
    make
    pytorch
