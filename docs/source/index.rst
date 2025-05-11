@@ -13,8 +13,8 @@ Contents
    pytorch
    cuda
    k8s
-   ray
    inference 
    llm_serve
+   sd_serve
    llm_app
    aigc_model
