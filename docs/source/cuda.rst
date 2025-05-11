@@ -5,10 +5,18 @@ CUDA
 CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing – an approach known as GPGPU (General-Purpose computing on Graphics Processing Units).
 
 Why do we need to learn CUDA?
-------------------------------
 
 - Existing foundation models are not hardware-optimized. We need to design hardware-aware models (e.g., `FlashAttention series <https://arxiv.org/abs/2205.14135>`_).
 - Not all operators for new emerging models are supported by PyTorch. We have to implement them by ourselves.
+
+GPU architecture
+-----------------
+
+Common CUDA optimizations
+-------------------------
+
+Hardware-aware algorithms
+--------------------------
 
 CUDA extension for PyTorch
 ----------------------------

@@ -3,6 +3,13 @@ LLM applications
 ================
 Large language models (LLMs) have demonstrated remarkable capabilities in various domains. However, building a real-world application with LLMs can be challenging due to their hallucinations and outdated knowledge. To address these issues, retrieval-augmented generation (RAG) and agentic AI have been employed. In this note, we will introduce them and provide a hands-on recipe to build a AI assistant and a AI scientist.
 
+After reading this note, you will be able to:
+
+- Understand the limitations of LLMs and how RAG and agentic AI can help.
+- Build a AI assistant with native LLM API calling.
+
+
+
 LLM and its limitations
 ------------------------
 Large Language Models (LLMs) are proficient in generating text that is coherent and contextually relevant. However, they have a tendency to produce information that is not grounded in factual evidence or prior knowledge, a phenomenon known as hallucination. This can result in the generation of inaccurate or misleading information.
