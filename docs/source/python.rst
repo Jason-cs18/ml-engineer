@@ -47,6 +47,98 @@ Here is an example of a class and a function:
       """
       return a + b
 
+Decorators
+-----------
+Decorators is a way to modify the behavior of a function or class. They are defined using the `@` symbol and can be used to add functionality to existing code without modifying it.
+
+A simple expample of a decorator is:
+
+.. code-block:: python
+
+  def my_decorator(func):
+      def wrapper():
+          print("Something is happening before the function is called.")
+          func()
+          print("Something is happening after the function is called.")
+      return wrapper
+
+  @my_decorator
+  def say_hello():
+      print("Hello!")
+
+  say_hello()
+
+Using decorator to implement authentication:
+
+.. code-block:: python
+
+  def authenticate(func):
+      def wrapper(*args, **kwargs):
+          if user.is_authenticated:
+              return func(*args, **kwargs)
+          else:
+              raise Exception("User must be authenticated to call this function.")
+      return wrapper
+
+  @authenticate
+  def sensitive_function():
+      print("This is a sensitive function.")
+
+  sensitive_function()
+
+Hooks
+-----
+Hooks refer to functions that can be overridden or extended to customize the behavior of a larger system or library.
+
+Here is an example of using hooks to extend behaviors:
+
+.. code-block:: python
+
+  import time
+  
+  class Programmer(object):
+    def __init__(self, name, hook=None):
+        self.name = name
+        self.hooks_func = hook
+        self.now_date = time.strftime("%Y-%m-%d")
+
+    def get_to_eat(self):
+        print(f"{self.name} - {self.now_date}: eat.")
+
+    def go_to_code(self):
+        print(f"{self.name} - {self.now_date}: code.")
+
+    def go_to_sleep(self):
+        print(f"{self.name} - {self.now_date}: sleep.")
+
+    def everyday(self):
+        self.get_to_eat()
+        self.go_to_code()
+        self.go_to_sleep()
+        # check the register_hook(hooked or unhooked)
+        # hooked
+        if self.hooks_func is not None:
+            self.hooks_func(self.name)
+
+  
+  def play_game(name):
+    now_date = time.strftime("%Y-%m-%d")
+    print(f"{name} - {now_date}: play game.")
+
+
+  def shopping(name):
+    now_date = time.strftime("%Y-%m-%d")
+    print(f"{name} - {now_date}: shopping.")
+
+
+  if __name__ == "__main__":
+    tom = Programmer("Tom", hook=play_game)
+    jerry = Programmer("Jerry", hook=shopping)
+    spike = Programmer("Spike")
+    tom.everyday()
+    jerry.everyday()
+    spike.everyday()
+
 
 Typing hints
 ------------
