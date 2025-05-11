@@ -2,6 +2,8 @@
 Python
 =======
 
+Python is a widely-used programming language for data science and machine learning. It is known for its simplicity and readability, making it a great choice for both beginners and experienced programmers.    
+
 Docstrings
 ----------
 Docstrings are a way to document your code. They are written in triple quotes and can be used to describe the purpose of a function, class, or module. Docstrings can be accessed using the `__doc__` attribute.
@@ -108,6 +110,9 @@ Here is an example of using anconda to create and manage virtual environments:
   # Install packages in the virtual environment
   conda install numpy pandas matplotlib
 
+  # List all virtual environments
+  conda env list
+
   # Deactivate the virtual environment
   conda deactivate
 
@@ -151,3 +156,51 @@ Here is an example of using `pytest` to test a function:
     
     if __name__ == "__main__":
         pytest.main()
+
+Packaging
+---------
+Packaging is the process of creating a distributable version of your code. This can be done using tools like `setuptools` and `wheel`. Packaging your code makes it easier to share with others and to install in different environments.
+
+Here is an example of packaging projects with `setup.py`:
+
+.. code-block:: bash
+
+    # file structure
+    my_package/
+        ├── __init__.py
+        ├── my_module.py
+        ├── my_script.py
+        ├── requirements.txt
+        └── setup.py
+
+.. code-block:: python
+
+    # setup.py
+    from setuptools import setup, find_packages
+    
+    with open('requirements.txt') as f:
+        requirements = f.read().splitlines()
+
+    setup(
+        name="my_package",
+        version="0.1",
+        packages=find_packages(),
+        install_requires=requirements,
+    )
+
+.. code-block:: bash
+
+    # Build the package
+    python setup.py sdist bdist_wheel
+
+    # Install the package
+    pip install my_package-0.1-py3-none-any.whl
+
+    # Uninstall the package
+    pip uninstall my_package
+
+.. code-block:: python
+
+    import mypackage.a as a
+    import mypackage.b as b
+
