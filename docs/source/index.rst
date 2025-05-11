@@ -12,6 +12,7 @@ Contents
    make
    pytorch
    cuda
+   triton
    k8s
    inference 
    llm_serve
