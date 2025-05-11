@@ -24,31 +24,15 @@ MLE roadmap
    * - CUDA
      - GPU acceleration
      - TBD
-   * - Ray
-     - Distributed computing platform
-     - TBD
    * - LLM serving
      - Inference engines for LLMs
      - ✅
    * - Inference engines
-     - TorchScript, ONNX, TensorRT, etc.
-     - TBD
-   * - AIGC model
-     - Scaling laws, efficient transformers, generative models, etc.
-     - WIP
-   * - Vision perception
-     - Vision foundation models
-     - ✅
-   * - AIGC system
-     - Fast LLM serving and efficient diffusion serving.
+     - Microsoft ONNX, NVIDIA TensorRT
      - TBD
    * - LLM applications
      - RAG and agentic LLMs
      - TBD
-   * - Avatar applications
-     - TTS, talking-face synthesis, motion synthesis, 3D animatable avatars.
+   * - AIGC models
+     - Generative modeling, foundation models for text, image, video, audio
      - TBD
-   * - Video streaming
-     - volume video streaming, video conferencing
-     - WIP
-

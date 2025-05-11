@@ -2,27 +2,6 @@
 AIGC model
 ==========
 
-Foundation model development
-----------------------------
-Developing a large-scale foundation model is a challenging task due to the high computational cost and the need for large-scale data. In this section, we will introduce the key components of a foundation model and accelerate the development process with `NeMo <https://github.com/NVIDIA/NeMo>`_.
-
-`NeMo <https://github.com/NVIDIA/NeMo>`_ is a scalable and high-performant generative AI framwork developed by NVIDIA that provides a set of tools for building large-scale foundation models (LLM, MLLM, and TTS).
-
-.. figure:: https://docs.nvidia.com/nemo-framework/user-guide/latest/_images/nemo-llm-mm-stack.png
-   :align: center
-
-   NeMo Overview
-
-As shown in the figure, the lifecycle of a foundation model development includes the following steps: 
-
-- `data curation <https://github.com/NVIDIA/NeMo-Curator>`_: extract/synthetic high-quality data
-- `training and customization <https://github.com/NVIDIA/NeMo-Run>`_: supervised fine-tuning and parameter-efficient fine-tuning
-- `alignment <https://github.com/NVIDIA/NeMo-Aligner>`_: align the model with human values (DPO, SteerLM, RLHF)
-- `deployment and inference <https://docs.nvidia.com/nemo-framework/user-guide/latest/deployment/llm/index.html#deploy-nemo-framework-models-llm>`_: TensorRT-LLM/vLLM on NVIDIA Triton inference server
-- `multimodal models development <https://docs.nvidia.com/nemo-framework/user-guide/latest/multimodalmodels/index.html#>`_: multimodal llms, vision-language models, text2image and NeRF
-
-Tutorial notebooks are listed `here <https://docs.nvidia.com/nemo-framework/user-guide/latest/playbooks/index.html>`_.
-
 Generative model basics
 --------------------------------
 
@@ -49,6 +28,29 @@ Taking a face generation as an example, we will introduce representative generat
 **Neural Radience Fields (NeRF)** WIP
 
 **3D Gaussian Splatting (3DGS)** WIP
+
+**Generative Video Models** WIP
+
+Foundation model development
+----------------------------
+Developing a large-scale foundation model is a challenging task due to the high computational cost and the need for large-scale data. In this section, we will introduce the key components of a foundation model and accelerate the development process with `NeMo <https://github.com/NVIDIA/NeMo>`_.
+
+`NeMo <https://github.com/NVIDIA/NeMo>`_ is a scalable and high-performant generative AI framwork developed by NVIDIA that provides a set of tools for building large-scale foundation models (LLM, MLLM, and TTS).
+
+.. figure:: https://docs.nvidia.com/nemo-framework/user-guide/latest/_images/nemo-llm-mm-stack.png
+   :align: center
+
+   NeMo Overview
+
+As shown in the figure, the lifecycle of a foundation model development includes the following steps: 
+
+- `data curation <https://github.com/NVIDIA/NeMo-Curator>`_: extract/synthetic high-quality data
+- `training and customization <https://github.com/NVIDIA/NeMo-Run>`_: supervised fine-tuning and parameter-efficient fine-tuning
+- `alignment <https://github.com/NVIDIA/NeMo-Aligner>`_: align the model with human values (DPO, SteerLM, RLHF)
+- `deployment and inference <https://docs.nvidia.com/nemo-framework/user-guide/latest/deployment/llm/index.html#deploy-nemo-framework-models-llm>`_: TensorRT-LLM/vLLM on NVIDIA Triton inference server
+- `multimodal models development <https://docs.nvidia.com/nemo-framework/user-guide/latest/multimodalmodels/index.html#>`_: multimodal llms, vision-language models, text2image and NeRF
+
+Tutorial notebooks are listed `here <https://docs.nvidia.com/nemo-framework/user-guide/latest/playbooks/index.html>`_.
 
 Video Foundation Model 
 ----------------------
@@ -117,7 +119,7 @@ Large language models (LLMs) have demonstrated excellent performance in various 
    * - `DeepSeek-V3 <https://arxiv.org/pdf/2412.19437>`_
      - DeepSeek
      - 2024.12
-     - Model size
+     - 671B 
      - Model architecture
      - Pre-training
      - Post-training

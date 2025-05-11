@@ -2,9 +2,9 @@
 Makefile
 =========
 
-``Makefile`` automates the process of building and installing the package. In addition, it can automates ML experimentation.
+``Makefile`` automates the process of building and installing the package. Usually, we use it to help us manage ML experiments.
 
-Use Makefile to manage ML experiments
+Manage ML experiments
 --------------------------------------
 
 1. Create a ``Makefile`` in the root directory of your project.

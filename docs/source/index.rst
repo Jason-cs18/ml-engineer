@@ -8,18 +8,14 @@ Contents
 
 .. toctree::
 
-   roadmap
    math
+   python
    make
    pytorch
    cuda
    k8s
    ray
-   inference
+   inference 
    llm_serve
-   vision_perception
-   aigc_model
-   aigc_system
    llm_app
-   avatar_app
-   video_streaming
+   aigc_model
